@@ -18,7 +18,9 @@
 <meta name="twitter:title" content="Servicio Técnico de Computadoras en Rosario - JF SOLUCIONES" />
 <meta name="twitter:description" content="Nos especializamos en diagnosticar y solucionar problemas de hardware y software, optimizando el rendimiento de computadoras y notebooks." />
 <meta name="twitter:image" content="https://jfsoluciones.com.ar/images/feed-2.png" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon.png" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;700&family=Tektur:wght@400;600;700&display=swap" />
@@ -42,7 +44,7 @@
         <li><a href="/contact/">Contacto</a></li>
       </ul>
     </nav>
-    <a class="btn btn-header" href="/contact/">Pedir un presupuesto</a>
+    <a class="btn btn-header" href="https://wa.me/5493413797372?text=Hola!+Necesito+que+revisen+mi+equipo">Pedir un presupuesto</a>
   </div>
 </header>
 
@@ -130,7 +132,9 @@
   </section>
 
   <section class="seccion seccion--azul" aria-labelledby="titulo-servicios">
-    <div class="contenedor">
+    <div class="contenedor" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
       <p class="antetitulo">Amplia gama de servicios de calidad</p>
       <h2 class="titulo-seccion" id="titulo-servicios">Nuestros Servicios Destacados</h2>
 
@@ -184,12 +188,14 @@
         </article>
       </div>
 
-      <p class="centrado"><a class="boton boton--gris" href="/services/">vER MÁS SERVICIOS</a></p>
+      <p class="centrado"><a class="boton boton--gris" href="/services/">VER MÁS SERVICIOS</a></p>
     </div>
   </section>
 
   <section class="seccion seccion--oscura" aria-labelledby="titulo-testimonios">
-    <div class="contenedor">
+    <div class="contenedor" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
       <p class="antetitulo">+400 reseñas de usuarios de google</p>
       <h2 class="titulo-seccion" id="titulo-testimonios">Lo que dicen nuestros clientes</h2>
 
@@ -379,7 +385,9 @@
   </section>
 
   <section class="seccion seccion--azul" aria-labelledby="titulo-nosotros">
-    <div class="contenedor doble">
+    <div class="contenedor doble" data-aos="fade-right"
+     data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
       <div>
         <img src="/images/feed-2.png" alt="Logo de JF SOLUCIONES" loading="lazy" width="520" height="520" />
       </div>
@@ -404,7 +412,9 @@
   </section>
 
   <section class="seccion seccion--oscura" aria-labelledby="titulo-diferenciacion">
-    <div class="contenedor">
+    <div class="contenedor" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
       <p class="antetitulo">Propuesta de valor diferencial</p>
       <h2 class="titulo-seccion" id="titulo-diferenciacion">
         Nuestra diferenciación se basa en brindarte lo mejor
@@ -435,14 +445,16 @@
     </div>
   </section>
 
-  <section class="llamado" aria-labelledby="titulo-llamado">
-    <div class="contenedor">
-      <p class="antetitulo">Mantené tu equipo en óptimas condiciones</p>
-      <h2 class="llamado__titulo" id="titulo-llamado">Obtené la mejor asistencia</h2>
-      <div class="llamado__botones">
-        <a class="boton boton--gris" href="/contact/">contacto</a>
-        <a class="boton boton--gris" href="https://maps.app.goo.gl/iYF1u953NTGmokmu6?g_st=iw"
-          >ubicacion</a
+  <section class="cta" aria-labelledby="titulo-llamado">
+    <div class="cta-inner" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+      <p class="eyebrow center">Mantené tu equipo en óptimas condiciones</p>
+      <h2 class="center cta-title" id="titulo-llamado">Obtené la mejor asistencia</h2>
+      <div class="cta-buttons">
+        <a class="btn" href="/contact/"><span class="ico ico-mail" aria-hidden="true"></span>contacto</a>
+        <a class="btn" href="https://maps.app.goo.gl/iYF1u953NTGmokmu6?g_st=iw" target="_blank" rel="noopener"
+          ><span class="ico ico-pin" aria-hidden="true"></span>ubicación</a
         >
       </div>
     </div>
@@ -494,5 +506,9 @@
 <a class="subir" href="#content" aria-label="Scroll al inicio">&#9650;</a>
 
 <script src="/assets/app.js" defer></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

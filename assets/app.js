@@ -41,7 +41,35 @@
     }
   }
 
+
+  function iniciarMenuMovil() {
+    var boton = document.querySelector(".menu-toggle");
+    var encabezado = document.querySelector(".site-header");
+    var menu = document.querySelector(".main-nav");
+    if (!boton || !encabezado || !menu) return;
+
+    function cerrarMenu() {
+      encabezado.classList.remove("menu-open");
+      boton.setAttribute("aria-expanded", "false");
+      boton.setAttribute("aria-label", "Abrir menú de navegación");
+    }
+
+    boton.addEventListener("click", function () {
+      var abierto = encabezado.classList.toggle("menu-open");
+      boton.setAttribute("aria-expanded", String(abierto));
+      boton.setAttribute("aria-label", abierto ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+    });
+
+    menu.addEventListener("click", function (evento) {
+      if (evento.target.closest("a")) cerrarMenu();
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900) cerrarMenu();
+    });
+  }
   function iniciar() {
+    iniciarMenuMovil();
     iniciarSlider(".diapositiva", {
       anterior: "[data-slider-anterior]",
       siguiente: "[data-slider-siguiente]",

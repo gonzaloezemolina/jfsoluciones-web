@@ -740,26 +740,46 @@ p { margin: 0 0 16px; }
     width: min(76vw, 290px);
     max-height: 220px;
   }
+}
 
-  .team-member--gonzalo {
-    padding-top: 48px;
-    padding-bottom: 48px;
+
+/* Image proportion refinements */
+@media (min-width: 981px) {
+  .diapositiva__imagen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
-  .team-member--gonzalo .split { gap: 20px; }
+  .diapositiva[data-diapositiva="0"] .diapositiva__imagen img {
+    width: min(100%, 700px);
+    height: auto;
+    max-height: 430px;
+    object-fit: contain;
+  }
+}
 
-  .team-member--gonzalo .media {
-    width: min(78vw, 320px);
-    margin: 0 auto;
+@media (max-width: 600px) {
+  .values {
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
 
-  .team-member--gonzalo .media img {
+  .values .eyebrow { margin-bottom: 8px; }
+  .values-title { margin-bottom: 20px; }
+
+  .values-image {
+    width: min(100%, 320px);
     aspect-ratio: 1 / 1;
     height: auto;
+    margin: 0 auto 24px;
+  }
+
+  .values-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
-  .team-member--gonzalo .content { text-align: center; }
-  .team-member--gonzalo .content h2 { margin-bottom: 6px; }
-  .team-member--gonzalo .role { margin: 0 0 12px; }
+  .values-grid { gap: 22px; }
 }

@@ -97,13 +97,68 @@
     </div>
   </section>
 
-  <section class="section how-to">
-    <div class="container center">
-      <h2>¿Cómo llevar mi equipo?</h2>
-      <h3>Notebook</h3>
-      <p>Tráela junto con su cargador y cable de alimentación originales (sin funda ni periféricos)</p>
-      <h3>Pc de escritorio</h3>
-      <p>Tráela sin cables (sin cable de alimentación, sin cables de monitor ni de periféricos).</p>
+  <section class="section how-to" aria-labelledby="titulo-como-llevar">
+    <div class="container">
+      <h2 id="titulo-como-llevar">¿Cómo llevar mi equipo?</h2>
+
+      <div class="how-to-grid">
+        <article class="how-to-card">
+          <div class="how-to-icon" aria-hidden="true">
+            <span class="how-to-icon-corner how-to-icon-corner--tl"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--tr"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--bl"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--br"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="5" width="14" height="9" rx="1"></rect>
+              <path d="M2.5 17.5h19l-1.6 2.3a1 1 0 0 1-.8.4H4.9a1 1 0 0 1-.8-.4z"></path>
+            </svg>
+          </div>
+          <h3>Notebook</h3>
+          <ul class="how-to-list">
+            <li class="how-to-item how-to-item--yes">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              <span><span class="sr-only">Sí, traer: </span>Cargador y cable de alimentación originales</span>
+            </li>
+            <li class="how-to-item how-to-item--no">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span><span class="sr-only">No traer: </span>Funda</span>
+            </li>
+            <li class="how-to-item how-to-item--no">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span><span class="sr-only">No traer: </span>Periféricos</span>
+            </li>
+          </ul>
+        </article>
+
+        <article class="how-to-card">
+          <div class="how-to-icon" aria-hidden="true">
+            <span class="how-to-icon-corner how-to-icon-corner--tl"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--tr"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--bl"></span>
+            <span class="how-to-icon-corner how-to-icon-corner--br"></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="7" y="3" width="10" height="18" rx="1.5"></rect>
+              <path d="M9.5 7h5M9.5 10h5"></path>
+              <circle cx="12" cy="16" r="1.3" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </div>
+          <h3>PC de escritorio</h3>
+          <ul class="how-to-list">
+            <li class="how-to-item how-to-item--no">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span><span class="sr-only">No traer: </span>Cable de alimentación</span>
+            </li>
+            <li class="how-to-item how-to-item--no">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span><span class="sr-only">No traer: </span>Cables de monitor</span>
+            </li>
+            <li class="how-to-item how-to-item--no">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span><span class="sr-only">No traer: </span>Cables de periféricos</span>
+            </li>
+          </ul>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -163,27 +218,7 @@
     </div>
   </section>
 
-  <section class="form-section">
-    <div class="container">
-      <h2 class="center">Para el envio de equipos</h2>
-      <p class="center">Debes completar el formulario y nos contactaremos contigo para coordinar el envio</p>
-      <div class="form-card">
-        <form method="post" action="#" autocomplete="on">
-          <label class="sr-only" for="f-nombre">Nombre Completo</label>
-          <input id="f-nombre" name="nombre" type="text" placeholder="Nombre Completo" autocomplete="name" required>
-          <label class="sr-only" for="f-email">Dirección de Correo Electrónico</label>
-          <input id="f-email" name="email" type="email" placeholder="Dirección de Correo Electrónico" autocomplete="email" required>
-          <label class="sr-only" for="f-tel">Numero de telefono</label>
-          <input id="f-tel" name="telefono" type="tel" placeholder="Numero de telefono" autocomplete="tel" required>
-          <label class="sr-only" for="f-msg">Problema</label>
-          <textarea id="f-msg" name="mensaje" rows="4" placeholder="Problema"></textarea>
-          <button class="btn" type="submit">Enviar Mensaje</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
+  <section class="cta" data-aos="fade-up">
     <div class="cta-inner">
       <p class="eyebrow center">Mantené tu equipo en óptimas condiciones</p>
       <h2 class="center cta-title">Obtené la mejor asistencia</h2>
@@ -230,6 +265,11 @@
   <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false"><path fill="#fff" d="M16.003 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.257.594 4.463 1.723 6.404L3.2 28.8l6.56-1.708a12.75 12.75 0 0 0 6.243 1.62h.005c7.06 0 12.8-5.74 12.8-12.8s-5.74-12.712-12.805-12.712zm0 23.02h-.004a10.6 10.6 0 0 1-5.4-1.48l-.387-.23-3.893 1.014 1.04-3.797-.253-.39a10.57 10.57 0 0 1-1.62-5.637c0-5.867 4.775-10.64 10.646-10.64 2.842 0 5.513 1.108 7.522 3.118a10.57 10.57 0 0 1 3.116 7.53c-.002 5.867-4.777 10.512-10.767 10.512zm5.84-7.92c-.32-.16-1.893-.934-2.187-1.04-.293-.107-.507-.16-.72.16-.213.32-.826 1.04-1.013 1.253-.187.213-.373.24-.693.08-.32-.16-1.352-.498-2.575-1.588-.952-.848-1.594-1.895-1.78-2.215-.187-.32-.02-.493.14-.652.144-.144.32-.373.48-.56.16-.187.213-.32.32-.533.107-.213.053-.4-.027-.56-.08-.16-.72-1.735-.986-2.375-.26-.624-.523-.54-.72-.55l-.613-.01c-.213 0-.56.08-.853.4-.293.32-1.12 1.094-1.12 2.668s1.147 3.095 1.307 3.308c.16.213 2.257 3.446 5.467 4.832.764.33 1.36.527 1.825.674.767.244 1.465.21 2.017.127.615-.092 1.893-.774 2.16-1.521.267-.747.267-1.387.187-1.521-.08-.133-.293-.213-.613-.373z"/></svg>
 </a>
 <a class="subir" href="#content" aria-label="Scroll al inicio">&#9650;</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script src="/assets/app.js" defer></script>
 </body>

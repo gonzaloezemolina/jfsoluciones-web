@@ -573,6 +573,12 @@ p { margin: 0 0 16px; }
 }
 .testimonios__grupo { display: none; }
 .testimonios__grupo.activa { display: block; }
+.testimonios__grupo.entrando-derecha { animation: testimonio-entrada-derecha 0.45s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.testimonios__grupo.entrando-izquierda { animation: testimonio-entrada-izquierda 0.45s cubic-bezier(0.4, 0, 0.2, 1) both; }
+@keyframes testimonio-entrada-derecha { from { transform: translateX(48px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes testimonio-entrada-izquierda { from { transform: translateX(-48px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+.testimonios__puntos { display: flex; justify-content: center; gap: 12px; margin-top: 32px; }
 .testimonio { margin-bottom: 42px; }
 .testimonio__cabecera { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
 .testimonio__cabecera img { width: 44px; height: 44px; border-radius: 50%; }

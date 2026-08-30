@@ -635,8 +635,9 @@ p { margin: 0 0 16px; }
   .cta { border-radius: 0 0 40px 40px; padding: 70px 24px; }
   .container { padding: 0 24px; }
   /* servicios internas */
-  .service.reverse .media { order: 0; }
   .service.reverse .content { order: 0; }
+  .service.reverse .media { order: 1; }
+  .service .media img { width: 90%; height: 90%; }
   .service-num, .service .content h2 { font-size: 32px; }
   /* contacto */
   .info-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }

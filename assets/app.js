@@ -47,6 +47,37 @@
     if (opciones.intervalo) {
       setInterval(function () { mostrar(indice + 1); }, opciones.intervalo);
     }
+
+    if (opciones.contenedor) {
+      var contenedor = document.querySelector(opciones.contenedor);
+      if (contenedor) {
+        var inicioX = 0;
+        var inicioY = 0;
+        var arrastrando = false;
+
+        contenedor.addEventListener("touchstart", function (evento) {
+          inicioX = evento.touches[0].clientX;
+          inicioY = evento.touches[0].clientY;
+          arrastrando = true;
+        }, { passive: true });
+
+        contenedor.addEventListener("touchend", function (evento) {
+          if (!arrastrando) return;
+          arrastrando = false;
+          var finX = evento.changedTouches[0].clientX;
+          var finY = evento.changedTouches[0].clientY;
+          var deltaX = finX - inicioX;
+          var deltaY = finY - inicioY;
+
+          if (Math.abs(deltaX) < 40 || Math.abs(deltaX) < Math.abs(deltaY)) return;
+          if (deltaX < 0) {
+            mostrar(indice + 1, 1);
+          } else {
+            mostrar(indice - 1, -1);
+          }
+        }, { passive: true });
+      }
+    }
   }
 
 
@@ -82,6 +113,7 @@
       anterior: "[data-slider-anterior]",
       siguiente: "[data-slider-siguiente]",
       puntos: "[data-slider-puntos]",
+      contenedor: ".principal",
       intervalo: 8000,
       animar: true,
     });
